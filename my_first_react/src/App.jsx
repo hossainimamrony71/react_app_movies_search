@@ -7,7 +7,7 @@ import {getTrendingMovies, updateSearchCount} from './appwrite.js'
 
 
 const API_BASE_URL = 'https://api.themoviedb.org/3'
-const API_KEY = import.meta.env.TMDB_API
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY
 const API_OPTIONS = {
   method: 'GET', 
   headers: {
@@ -34,6 +34,7 @@ const fetchMoviews = async(query='') =>{
 
     
     const response  = await fetch(endpoint, API_OPTIONS)
+    console.log(response.json())
     // alert(response)
     if(!response.ok){
       throw new Error("Faild to fetch movies");
