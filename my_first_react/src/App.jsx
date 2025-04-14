@@ -55,7 +55,7 @@ const fetchMoviews = async(query='') =>{
 
   }catch(error){
     console.log(`Error fetching movies: ${error}`)
-    seterrorMessage(`Error fetching movies: ${response}`)
+    seterrorMessage(`Error fetching movies: ${error}`)
   }finally{
     setisLoading(false)
   }
