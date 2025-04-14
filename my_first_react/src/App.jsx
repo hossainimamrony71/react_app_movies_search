@@ -34,7 +34,7 @@ const fetchMoviews = async(query='') =>{
 
     
     const response  = await fetch(endpoint, API_OPTIONS)
-    console.log(response.json())
+    
     // alert(response)
     if(!response.ok){
       throw new Error("Faild to fetch movies");
